@@ -1,0 +1,9 @@
+<library path="goalpoint_rviz_plugin">
+  <class name="goalpoint_rviz_plugin/GoalpointTool"
+         type="goalpoint_rviz_plugin::GoalpointTool"
+         base_class_type="rviz_common::Tool">
+    <description>
+      A tool for sending goalpoints
+    </description>
+  </class>
+</library>

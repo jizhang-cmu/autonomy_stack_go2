@@ -1,0 +1,20 @@
+<launch>
+
+  <arg name="world_name" default="garage"/>
+
+  <node pkg="visualization_tools" exec="visualizationTools" name="visualizationTools" output="screen">
+    <param name="metricFile" value="$(find-pkg-prefix vehicle_simulator)/log/metrics" />
+    <param name="trajFile" value="$(find-pkg-prefix vehicle_simulator)/log/trajectory" />
+    <param name="mapFile" value="$(find-pkg-prefix vehicle_simulator)/mesh/$(var world_name)/map.ply" />
+    <param name="overallMapVoxelSize" value="0.1" />
+    <param name="exploredAreaVoxelSize" value="0.2" />
+    <param name="exploredVolumeVoxelSize" value="0.2" />
+    <param name="transInterval" value="0.1" />
+    <param name="yawInterval" value="0.17" />
+    <param name="overallMapDisplayInterval" value="2" />
+    <param name="exploredAreaDisplayInterval" value="1" />
+  </node>
+
+  <!--node pkg="visualization_tools" exec="realTimePlot.py" name="realTimePlot" output="screen"/-->
+
+</launch>

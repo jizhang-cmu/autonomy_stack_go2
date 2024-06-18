@@ -1,0 +1,37 @@
+<launch>
+
+  <node pkg="terrain_analysis" exec="terrainAnalysis" name="terrainAnalysis" output="screen">
+    <param name="scanVoxelSize" value="0.05" />
+    <param name="decayTime" value="2.0" />
+    <param name="noDecayDis" value="0.0" />
+    <param name="clearingDis" value="8.0" />
+    <param name="useSorting" value="true" />
+    <param name="quantileZ" value="0.25" />
+    <param name="considerDrop" value="false" />
+    <param name="limitGroundLift" value="false" />
+    <param name="maxGroundLift" value="0.15" />
+    <param name="clearDyObs" value="false" />
+    <param name="minDyObsDis" value="0.3" />
+    <param name="minDyObsAngle" value="0.0" />
+    <param name="minDyObsRelZ" value="-0.3" />
+    <param name="absDyObsRelZThre" value="0.2" />
+    <param name="minDyObsVFOV" value="-16.0" />
+    <param name="maxDyObsVFOV" value="16.0" />
+    <param name="minDyObsPointNum" value="1" />
+    <param name="noDataObstacle" value="true" />
+    <param name="noDataBlockSkipNum" value="0" />
+    <param name="minBlockPointNum" value="10" />
+    <param name="maxElevBelowVeh" value="-0.6" />
+    <param name="noDataAreaMinX" value="0.3" />
+    <param name="noDataAreaMaxX" value="1.8" />
+    <param name="noDataAreaMinY" value="-0.9" />
+    <param name="noDataAreaMaxY" value="0.9" />
+    <param name="vehicleHeight" value="1.5" />
+    <param name="voxelPointUpdateThre" value="100" />
+    <param name="voxelTimeUpdateThre" value="2.0" />
+    <param name="minRelZ" value="-1.5" />
+    <param name="maxRelZ" value="0.5" />
+    <param name="disRatioZ" value="0.2" />
+  </node>
+
+</launch>

@@ -1,0 +1,9 @@
+<library path="teleop_rviz_plugin">
+  <class name="teleop_rviz_plugin/TeleopPanel"
+         type="teleop_rviz_plugin::TeleopPanel"
+         base_class_type="rviz_common::Panel">
+    <description>
+      A panel for driving diff-drive style robot base control.
+    </description>
+  </class>
+</library>

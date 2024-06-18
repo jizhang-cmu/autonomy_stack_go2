@@ -1,0 +1,66 @@
+<launch>
+
+  <arg name="world_name" default="unity"/>
+  <arg name="vehicleHeight" default="0.366"/>
+  <arg name="sensorOffsetX" default="0.0"/>
+  <arg name="sensorOffsetY" default="0.0"/>
+  <arg name="cameraOffsetZ" default="0.0"/>
+  <arg name="vehicleX" default="0.0"/>
+  <arg name="vehicleY" default="0.0"/>
+  <arg name="terrainZ" default="0.0"/>
+  <arg name="vehicleYaw" default="0.0"/>
+  <arg name="checkTerrainConn" default="true"/>
+
+  <node pkg="joy" exec="joy_node" name="ps3_joy" output="screen" >
+    <param name="dev" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+    <param name="autorepeat_rate" value="0.0" />
+  </node>
+
+  <include file="$(find-pkg-share local_planner)/launch/local_planner.launch" >
+    <arg name="sensorOffsetX" value="$(var sensorOffsetX)" />
+    <arg name="sensorOffsetY" value="$(var sensorOffsetY)" />
+    <arg name="cameraOffsetZ" value="$(var cameraOffsetZ)"/>
+    <arg name="goalX" value="$(var vehicleX)"/>
+    <arg name="goalY" value="$(var vehicleY)"/>
+  </include>
+
+  <include file="$(find-pkg-share terrain_analysis)/launch/terrain_analysis.launch" />
+
+  <include file="$(find-pkg-share terrain_analysis_ext)/launch/terrain_analysis_ext.launch" >
+    <arg name="checkTerrainConn" value="$(var checkTerrainConn)"/>
+  </include>
+
+  <include file="$(find-pkg-share vehicle_simulator)/launch/vehicle_simulator.launch" >
+    <arg name="vehicleHeight" value="$(var vehicleHeight)"/>
+    <arg name="sensorOffsetX" value="$(var sensorOffsetX)" />
+    <arg name="sensorOffsetY" value="$(var sensorOffsetY)" />
+    <arg name="vehicleX" value="$(var vehicleX)"/>
+    <arg name="vehicleY" value="$(var vehicleY)"/>
+    <arg name="terrainZ" value="$(var terrainZ)"/>
+    <arg name="vehicleYaw" value="$(var vehicleYaw)"/>
+  </include>
+
+  <include file="$(find-pkg-share sensor_scan_generation)/launch/sensor_scan_generation.launch" />
+
+  <include file="$(find-pkg-share visualization_tools)/launch/visualization_tools.launch" >
+    <arg name="world_name" value="$(var world_name)"/>
+  </include>
+
+  <node pkg="ros_tcp_endpoint" exec="default_server_endpoint" name="endpoint" output="screen">
+    <param name="ROS_IP" value="0.0.0.0"/>
+    <param name="ROS_TCP_PORT" value="10000"/>
+  </node>
+
+  <node pkg="vehicle_simulator" exec="sim_image_repub" name="sim_image_repub" output="screen">
+    <param name="camera_in_topic" value="/camera/image/compressed"/>
+    <param name="camera_raw_out_topic" value="/camera/image/raw"/>
+    <param name="sem_in_topic" value="/camera/semantic_image/compressed"/>
+    <param name="sem_raw_out_topic" value="/camera/semantic_image/raw"/>
+    <param name="depth_in_topic" value="/camera/depth/compressed"/>
+    <param name="depth_raw_out_topic" value="/camera/depth/raw"/>
+  </node>
+
+  <node launch-prefix="nice" pkg="rviz2" exec="rviz2" name="rvizGA" args="-d $(find-pkg-share vehicle_simulator)/rviz/vehicle_simulator.rviz"/>
+
+</launch>

@@ -1,0 +1,458 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded: ~
+      Splitter Ratio: 0.8294117450714111
+    Tree Height: 763
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded: ~
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: FreePaths
+  - Class: teleop_rviz_plugin/TeleopPanel
+    Name: TeleopPanel
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Axes
+      Enabled: true
+      Length: 1
+      Name: Vehicle
+      Radius: 0.15000000596046448
+      Reference Frame: vehicle
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera/image/raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Enabled: true
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: SemanticImage
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera/semantic_image/raw
+      Value: true
+    - Alpha: 0.10000000149011612
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 0.9582680463790894
+        Min Value: -0.043718695640563965
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: FlatColor
+      Decay Time: 10
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: RegScan
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 2
+      Size (m): 0.05000000074505806
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /registered_scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.20000000298023224
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 0.9582680463790894
+        Min Value: -0.043718695640563965
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: FlatColor
+      Decay Time: 10
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: SensorScan
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 2
+      Size (m): 0.10000000149011612
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /sensor_scan
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: false
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: true
+      Max Color: 255; 255; 255
+      Max Intensity: 0.10000000149011612
+      Min Color: 0; 0; 0
+      Min Intensity: -0.10000000149011612
+      Name: TerrainMap
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.03999999910593033
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /terrain_map
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: false
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: true
+      Max Color: 255; 255; 255
+      Max Intensity: 0.20000000298023224
+      Min Color: 0; 0; 0
+      Min Intensity: -0.20000000298023224
+      Name: TerrainMapExt
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.03999999910593033
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /terrain_map_ext
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Billboards
+      Line Width: 0.05000000074505806
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /path
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: false
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 0; 170; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 6
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: FreePaths
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 2
+      Size (m): 0.019999999552965164
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /free_paths
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/PointStamped
+      Color: 204; 41; 204
+      Enabled: true
+      History Length: 1
+      Name: Waypoint
+      Radius: 1.2000000476837158
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /way_point
+      Value: true
+    - Alpha: 0.10000000149011612
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: OverallMap
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 2
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /overall_map
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 0.20000000298023224
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 0; 255; 0
+      Color Transformer: FlatColor
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: TravArea
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 2
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /explored_areas
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 7.29265022277832
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: Trajectory
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 4
+      Size (m): 0.009999999776482582
+      Style: Points
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /trajectory
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Class: rviz_default_plugins/Polygon
+      Color: 0; 255; 0
+      Enabled: true
+      Name: Boundary
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /navigation_boundary
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 0; 0; 0
+    Fixed Frame: map
+    Frame Rate: 15
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: waypoint_rviz_plugin/WaypointTool
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: waypoint
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 25.188352584838867
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 3.2433247566223145
+        Y: -4.5043487548828125
+        Z: 0.8352981805801392
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.5697963237762451
+      Target Frame: map
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 3.1404104232788086
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: true
+  Height: 914
+  Hide Left Dock: true
+  Hide Right Dock: false
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000338fc0200000009fb0000001200530065006c0065006300740069006f006e000000003d000001b80000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003d00000338000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001400430061006d0065007200610049006e006900740100000474000000160000000000000000000000010000017d00000338fc0200000007fb0000000a0049006d006100670065010000003d000000ee0000002800fffffffb0000000a0049006d006100670065010000003d000000c00000000000000000fb0000001a00530065006d0061006e0074006900630049006d0061006700650100000131000000ec0000002800fffffffb0000001600540065006c0065006f007000500061006e0065006c0100000223000001520000004700fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007300000001c6000001af000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073d0000003efc0100000002fb0000000800540069006d006500000000000000073d000002fb00fffffffb0000000800540069006d00650100000000000004500000000000000000000004990000033800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  SemanticImage:
+    collapsed: false
+  TeleopPanel:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1564
+  X: 58
+  Y: 27

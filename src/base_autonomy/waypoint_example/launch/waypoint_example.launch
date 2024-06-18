@@ -1,0 +1,15 @@
+<launch>
+
+  <node pkg="waypoint_example" exec="waypointExample" name="waypointExample" output="screen">
+    <param name="waypoint_file_dir" value="$(find-pkg-share waypoint_example)/data/waypoints.ply" />
+    <param name="boundary_file_dir" value="$(find-pkg-share waypoint_example)/data/boundary.ply" />
+    <param name="waypointXYRadius" value="0.5" />
+    <param name="waypointZBound" value="5.0" />
+    <param name="waitTime" value="0.0" />
+    <param name="frameRate" value="5.0" />
+    <param name="speed" value="1.0" />
+    <param name="sendSpeed" value="true" />
+    <param name="sendBoundary" value="true" />
+  </node>
+
+</launch>

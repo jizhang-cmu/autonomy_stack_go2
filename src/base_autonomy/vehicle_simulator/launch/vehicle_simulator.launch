@@ -1,0 +1,49 @@
+<launch>
+
+  <arg name="sensorOffsetX" default="0.0"/>
+  <arg name="sensorOffsetY" default="0.0"/>
+  <arg name="vehicleHeight" default="0.366"/>
+
+  <arg name="vehicleX" default="0.0"/>
+  <arg name="vehicleY" default="0.0"/>
+  <arg name="vehicleZ" default="0.0"/>
+  <arg name="terrainZ" default="0.0"/>
+  <arg name="vehicleYaw" default="0.0"/>
+
+  <arg name="terrainVoxelSize" default="0.05"/>
+  <arg name="groundHeightThre" default="0.1"/>
+  <arg name="adjustZ" default="false"/>
+  <arg name="terrainRadiusZ" default="1.0"/>
+  <arg name="minTerrainPointNumZ" default="5"/>
+  <arg name="smoothRateZ" default="0.5"/>
+  <arg name="adjustIncl" default="false"/>
+  <arg name="terrainRadiusIncl" default="2.0"/>
+  <arg name="minTerrainPointNumIncl" default="200"/>
+  <arg name="smoothRateIncl" default="0.5"/>
+  <arg name="InclFittingThre" default="0.2"/>
+  <arg name="maxIncl" default="30.0"/>
+
+  <node pkg="vehicle_simulator" exec="vehicleSimulator" name="vehicleSimulator" output="screen">
+    <param name="sensorOffsetX" value="$(var sensorOffsetX)" />
+    <param name="sensorOffsetY" value="$(var sensorOffsetY)" />
+    <param name="vehicleHeight" value="$(var vehicleHeight)" />
+    <param name="vehicleX" value="$(var vehicleX)" />
+    <param name="vehicleY" value="$(var vehicleY)" />
+    <param name="vehicleZ" value="$(var vehicleZ)" />
+    <param name="terrainZ" value="$(var terrainZ)" />
+    <param name="vehicleYaw" value="$(var vehicleYaw)" />
+    <param name="terrainVoxelSize" value="$(var terrainVoxelSize)" />
+    <param name="groundHeightThre" value="$(var groundHeightThre)" />
+    <param name="adjustZ" value="$(var adjustZ)" />
+    <param name="terrainRadiusZ" value="$(var terrainRadiusZ)" />
+    <param name="minTerrainPointNumZ" value="$(var minTerrainPointNumZ)" />
+    <param name="smoothRateZ" value="$(var smoothRateZ)" />
+    <param name="adjustIncl" value="$(var adjustIncl)" />
+    <param name="terrainRadiusIncl" value="$(var terrainRadiusIncl)" />
+    <param name="minTerrainPointNumIncl" value="$(var minTerrainPointNumIncl)" />
+    <param name="smoothRateIncl" value="$(var smoothRateIncl)" />
+    <param name="InclFittingThre" value="$(var InclFittingThre)" />
+    <param name="maxIncl" value="$(var maxIncl)" />
+  </node>
+
+</launch>

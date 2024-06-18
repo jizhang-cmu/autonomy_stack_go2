@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>point_lio_unilidar</name>
+  <version>0.0.0</version>
+
+  <description>
+    This is a modified version of LOAM which is original algorithm
+    is described in the following paper:
+    J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time.
+      Robotics: Science and Systems Conference (RSS). Berkeley, CA, July 2014.
+  </description>
+
+  <maintainer email="lukelbmeng@gmail.com">Lingbo Meng</maintainer>
+
+  <license>BSD</license>
+
+  <author email="lukelbmeng@gmail.com">Lingbo Meng</author>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2</depend>
+  <depend>pcl_ros</depend>
+
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <build_export_depend>message_runtime</build_export_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>transform_sensors</exec_depend>
+
+  <!-- <test_depend>rostest</test_depend>
+  <test_depend>rosbag</test_depend> -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

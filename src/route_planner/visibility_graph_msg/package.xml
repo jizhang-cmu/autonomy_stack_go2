@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>visibility_graph_msg</name>
+  <version>0.0.1</version>
+  <description>Visibility Graph Message</description>
+  <maintainer email="fanyang2@alumni.cmu.edu">Fan Yang</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>builtin_interfaces</depend>
+
+
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

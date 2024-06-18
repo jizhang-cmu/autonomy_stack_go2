@@ -1,0 +1,51 @@
+<launch>
+<!-- Launch file for Livox AVIA LiDAR -->
+
+	<arg name="rviz" default="true" />
+
+	<!-- 启动节点: pointlio_mapping -->
+	<node pkg="point_lio_unilidar" type="pointlio_mapping" name="laserMapping" output="screen">
+
+		<!-- 加载参数文件 -->
+		<rosparam command="load" file="$(find point_lio_unilidar)/config/avia.yaml" />
+
+		<!-- 设置参数: 是否使用IMU作为Point-LIO的输入（0表示不使用，1表示使用） -->
+		<param name="use_imu_as_input" type="bool" value="0"/> <!--change to 1 to use IMU as input of Point-LIO-->
+
+		<!-- 设置参数: 是否按照IMU的频率进行状态传播（1表示是，0表示不是） -->
+		<param name="prop_at_freq_of_imu" type="bool" value="1"/>
+
+		<!-- 设置参数: 是否检查数据是否饱和（1表示是，0表示不是） -->
+		<param name="check_satu" type="bool" value="1"/>
+
+		<!-- 设置参数: 初始化地图的大小（即需要多少个点云帧来构建初始地图） -->
+		<param name="init_map_size" type="int" value="10"/>
+
+		<!-- 设置参数: 特征点过滤的倍数（即每连续point_filter_num点中取一个点，该值越大则降采样程度越大） -->
+		<param name="point_filter_num" type="int" value="1"/> <!--4, 3--> 
+
+		<!-- 设置参数: 是否进行空间下采样（1表示是，0表示不是） -->
+		<param name="space_down_sample" type="bool" value="0" />  
+
+		<!-- 设置参数: 特征点表面的滤波器大小 -->
+		<param name="filter_size_surf" type="double" value="0.3" /> <!--0.5, 0.3, 0.2, 0.15, 0.1--> 
+		
+		<!-- 设置参数: 地图的滤波器大小 -->
+		<param name="filter_size_map" type="double" value="0.2" /> <!--0.5, 0.3, 0.15, 0.1-->
+		
+		<!-- 设置参数: 立方体的边长 -->
+		<param name="cube_side_length" type="double" value="2000" /> <!--1000-->
+
+		<!-- 设置参数: 是否启用运行时位置日志记录（1表示是，0表示不是） -->
+		<param name="runtime_pos_log_enable" type="bool" value="0" /> <!--1-->
+	</node>
+
+	<!-- 如果启动RViz可视化，则在一个group中启动rviz节点 -->
+	<group if="$(arg rviz)">
+		<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find point_lio_unilidar)/rviz_cfg/loam_livox.rviz" />
+	</group>
+
+	<!-- 设置launch文件启动时的前缀命令（此处是用gdb进行调试） -->
+	launch-prefix="gdb -ex run --args"
+
+</launch>

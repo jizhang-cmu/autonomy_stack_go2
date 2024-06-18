@@ -1,0 +1,25 @@
+<launch>
+
+  <arg name="checkTerrainConn" default="false"/>
+
+  <node pkg="terrain_analysis_ext" exec="terrainAnalysisExt" name="terrainAnalysisExt" output="screen">
+    <param name="scanVoxelSize" value="0.1" />
+    <param name="decayTime" value="10.0" />
+    <param name="noDecayDis" value="0.0" />
+    <param name="clearingDis" value="30.0" />
+    <param name="useSorting" value="true" />
+    <param name="quantileZ" value="0.1" />
+    <param name="vehicleHeight" value="1.5" />
+    <param name="voxelPointUpdateThre" value="100" />
+    <param name="voxelTimeUpdateThre" value="2.0" />
+    <param name="lowerBoundZ" value="-2.5" />
+    <param name="upperBoundZ" value="1.0" />
+    <param name="disRatioZ" value="0.1" />
+    <param name="checkTerrainConn" value="$(var checkTerrainConn)" />
+    <param name="terrainConnThre" value="0.5" />
+    <param name="terrainUnderVehicle" value="-0.75" />
+    <param name="ceilingFilteringThre" value="2.0" />
+    <param name="localTerrainMapRadius" value="4.0" />
+  </node>
+
+</launch>

@@ -1,0 +1,30 @@
+<package format="3">
+  <name>visualization_tools</name>
+  <version>0.0.1</version>
+  <description>Visulization Tools</description>
+  <maintainer email="hongbiaz@cmu.edu">Hongbiao Zhu</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>message_filters</depend>
+  <depend>pcl_ros</depend>
+  <depend>pcl_conversions</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
