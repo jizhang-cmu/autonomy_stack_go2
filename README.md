@@ -223,4 +223,4 @@ The SLAM module is based on [Point-LIO](https://github.com/hku-mars/Point-LIO).
 
 The base autonomy system is based on [Autonomous Exploration Development Environment](https://www.cmu-exploration.com).
 
-The route planner is based on [Far Planner](https://github.com/MichaelFYang/far_planner).
+The route planner is based on [FAR Planner](https://github.com/MichaelFYang/far_planner).
