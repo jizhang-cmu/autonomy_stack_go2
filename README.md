@@ -211,7 +211,7 @@ ros2 bag play bagfile_name.db3
 
 ## Main Contributors
 
-[Guofei Chen](https://gfchen01.cc), [Botao He](https://github.com/Bottle101), [Guanya Shi](gshi.me), and [Ji Zhang](https://frc.ri.cmu.edu/~zhangji)
+[Guofei Chen](https://gfchen01.cc), [Botao He](https://github.com/Bottle101), [Guanya Shi](https://www.gshi.me), and [Ji Zhang](https://frc.ri.cmu.edu/~zhangji)
 
 ## Credits
 
