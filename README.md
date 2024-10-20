@@ -10,16 +10,10 @@ The repository contains the full autonomy stack for the [Unitree Go2 platform](h
 
 The system is integrated with [Unity](https://unity.com) environment models. For simulation, the repository has been tested in Ubuntu 22.04 with [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation.html) and Ubuntu 22.04 with [ROS2 Humble](https://docs.ros.org/en/humble/Installation.html). Install dependencies with the command lines below.
 
-For Foxy:
+For Foxy and Humble:
 ```
 sudo apt update
-sudo apt install libusb-dev ros-foxy-perception-pcl ros-foxy-sensor-msgs-py ros-foxy-tf-transformations ros-foxy-joy ros-foxy-rmw-cyclonedds-cpp ros-foxy-rosidl-generator-dds-idl python3-colcon-common-extensions python-is-python3 
-pip install transforms3d pyyaml
-```
-For Humble:
-```
-sudo apt update
-sudo apt install libusb-dev ros-humble-perception-pcl ros-humble-sensor-msgs-py ros-humble-tf-transformations ros-humble-joy ros-humble-rmw-cyclonedds-cpp ros-humble-rosidl-generator-dds-idl python3-colcon-common-extensions python-is-python3 
+sudo apt install -y libusb-dev ros-$ROS_DISTRO-perception-pcl ros-$ROS_DISTRO-sensor-msgs-py ros-$ROS_DISTRO-tf-transformations ros-$ROS_DISTRO-joy ros-$ROS_DISTRO-rmw-cyclonedds-cpp ros-$ROS_DISTRO-rosidl-generator-dds-idl ros-$ROS_DISTRO-tf2-sensor-msgs python3-colcon-common-extensions python-is-python3
 pip install transforms3d pyyaml
 ```
 Clone the open-source repository.
