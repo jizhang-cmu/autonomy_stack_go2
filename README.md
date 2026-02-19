@@ -8,7 +8,7 @@ The repository contains the full autonomy stack for the [Unitree Go2 platform](h
 
 ### Base Autonomy
 
-The system is integrated with [Unity](https://unity.com) environment models. For simulation, the repository has been tested in Ubuntu 22.04 with [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation.html) and Ubuntu 22.04 with [ROS2 Humble](https://docs.ros.org/en/humble/Installation.html). Install dependencies with the command lines below.
+The system is integrated with [Unity](https://unity.com) environment models. For simulation, the repository has been tested in Ubuntu 20.04 with [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation.html) and Ubuntu 22.04 with [ROS2 Humble](https://docs.ros.org/en/humble/Installation.html). Install dependencies with the command lines below.
 
 For Foxy:
 ```
